@@ -17,7 +17,7 @@ on:
        type: boolean
       tags:
         discription: 'test'
-        required: test
+        required: true
         type: string
       environment:
         discription : 'environment'
