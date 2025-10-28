@@ -1,0 +1,37 @@
+name: inputexample
+on: 
+  workflow_dispatch:
+    inputs:
+      loglevel:
+       discription: 'log level'
+       required: true
+       default: 'warning'
+       type: choice
+       options:
+        - info
+        - warning
+        - debug
+      print_tags:
+       discription: 'true to print STDOUT'
+       required:  true
+       type: boolean
+      tags:
+        discription: 'test'
+        required: test
+        type: string
+      environment:
+        discription : 'environment'
+        required: true
+        type: environment
+jobs:
+  inputjob:
+    runs-on: ubuntu-latest
+    steps :
+      - name : print tags
+        run : echo "The tags are ${{ inputs.tags }}"
+      - name : print environment
+        run: echo "The environment are ${{ inputs.environment }}"
+      - name : print loglevel
+        run: echo "The loglevel are ${{ inputs.loglevel }}"
+
+         

@@ -1,11 +1,13 @@
 name: firstpipeline
-# on events trigger
+
+# on events trigger . This defines the trigger for the workflow.
 on: [push]
 
-jobs: # like pipeline
+jobs: #  A job is a set of steps that run in the same environment.
   first:
     runs-on: ubuntu-latest # linux/windows/mac
-    steps: # stages
+    steps: # These are the individual commands or actions that run inside the job.
+    # run: The actual shell command that will be executed. 
       - name: step 1
         run : echo "Ganesha"
       - name: step 1
@@ -13,3 +15,38 @@ jobs: # like pipeline
 
 
 
+# 🧩 name: firstpipeline
+# This sets the name of your workflow. It's just a label to help you identify it in the GitHub Actions UI.
+
+# 🚀 on: [push]
+# This defines the trigger for the workflow.
+
+# push means the workflow will run every time someone pushes code to the repository (e.g., commits to any branch).
+
+# 🛠️ jobs
+# A job is a set of steps that run in the same environment.
+
+# You can have multiple jobs running in parallel or sequentially.
+
+# In your example, there's one job named first.
+
+# 🖥️ runs-on: ubuntu-latest
+# This specifies the virtual machine (runner) that will execute the job.
+
+# ubuntu-latest means it will run on the latest version of Ubuntu Linux.
+
+# Alternatives include windows-latest or macos-latest.
+
+# 📋 steps
+# These are the individual commands or actions that run inside the job.
+
+# Each step can run a shell command or use a prebuilt GitHub Action.
+
+# yaml
+# - name: step 1
+#   run: echo "Ganesha"
+# name: A label for the step (optional but useful for readability).
+
+# run: The actual shell command that will be executed.
+
+# You have two steps here, both using echo to print messages to the console.
