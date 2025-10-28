@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       loglevel:
-       discription: 'log level'
+       discription: 'log-level'
        required: true
        default: 'warning'
        type: choice
