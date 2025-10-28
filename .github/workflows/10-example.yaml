@@ -1,0 +1,15 @@
+name: firstpipeline
+# on events trigger
+on: [push]
+
+jobs: # like pipeline
+  first:
+    runs-on: ubuntu-latest # linux/windows/mac
+    steps: # stages
+      - name: step 1
+        run : echo "Ganesha"
+      - name: step 1
+        run : echo "hi github action"
+
+
+
