@@ -31,7 +31,6 @@ jobs:
         run : echo "The tags are ${{ inputs.tags }}"
       - name : print environment
         run: echo "The environment are ${{ inputs.environment }}"
-      - name : print loglevel
-        run: echo "The loglevel are ${{ inputs.loglevel }}"
+      
 
          
